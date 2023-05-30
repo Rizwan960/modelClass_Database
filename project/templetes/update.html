@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Data</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+
+<form  method="post" >
+    {% csrf_token %}
+    <div class="mb-3">
+        <input class="form-control" type="text" value="{{obj.name}}"  name="name">
+    </div>
+    <br>
+    <div class="mb-3">
+
+        <input class="form-control" type="email" value="{{obj.email}}" name="email">
+    </div>
+    <br>
+    <div class="mb-3">
+        <input class="form-control" type="password" value="{{obj.password}}" name="p1">
+    </div>
+    <br>
+    <div class="mb-3">
+        <input class="form-control" type="hidden" value="{{obj.id}}"  name="id">
+    </div>
+    <br>
+    <div class="mb-3">
+        <input class="form-control" type="number" value="{{obj.age}}"  name="age">
+    </div>
+    <br>
+    <button type="submit">Update</button>
+</form>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
